@@ -2,14 +2,15 @@ meta-nodejs <img src="https://github.com/nodejs/nodejs.org/raw/master/static/ima
 ===========
 
 OpenEmbedded layer for latest [Node.js](https://nodejs.org/ "Node.js") releases.
- 
+
 :information_source: *As an official extension of this layer, installing [`meta-nodejs-contrib`](https://github.com/imyller/meta-nodejs-contrib) is highly recommended for community contributed Node.js based package recipes and Bitbake helper classes.*
 
 ## Node.js releases
 
- * ![Current 7](https://img.shields.io/badge/Node.js%20Current-7.10.0-green.svg)
- * ![LTS 6](https://img.shields.io/badge/Node.js%20LTS-6.10.3-blue.svg)
- * ![Maintenance 4](https://img.shields.io/badge/Node.js%20Maintenance-4.8.3-B0C4DE.svg)
+ * ![Current 9](https://img.shields.io/badge/Node.js%20Current-9.1.0-green.svg)
+ * ![LTS 8](https://img.shields.io/badge/Node.js%20LTS-8.9.1-blue.svg)
+ * ![LTS Maintenance 6](https://img.shields.io/badge/Node.js%20Maintenance-6.12.0-B0C4DE.svg)
+ * ![Maintenance 4](https://img.shields.io/badge/Node.js%20Maintenance-4.8.6-B0C4DE.svg)
  * ![End of life 0.12](https://img.shields.io/badge/Node.js%20End%20of%20Life-0.12.18-lightgray.svg)
  * ![End of life 0.10](https://img.shields.io/badge/Node.js%20End%20of%20Life-0.10.48-lightgray.svg)
  * ![End of life 0.8](https://img.shields.io/badge/Node.js%20End%20of%20Life-0.8.28-lightgrey.svg)
@@ -53,15 +54,15 @@ Installation
 Layer installation varies depending on your OpenEmbedded distribution. These instructions are generic.
 
 1. Fetch `meta-nodejs` layer from `https://github.com/imyller/meta-nodejs.git`
-	
+
 2. Add `meta-nodejs` layer to `EXTRALAYERS` in `conf/bblayers.conf`. For example:
 
-	```bitbake
-		EXTRALAYERS +=" \
-			${TOPDIR}/sources/meta-nodejs \
-		"
-	```
-	
+    ```bitbake
+        EXTRALAYERS +=" \
+            ${TOPDIR}/sources/meta-nodejs \
+        "
+    ```
+
 ## Recommended layers
 
 As an official extension of this layer, installing [`meta-nodejs-contrib`](https://github.com/imyller/meta-nodejs-contrib) is highly recommended for community contributed Node.js based package recipes and Bitbake helper classes.
@@ -74,7 +75,13 @@ Usage
 To build latest stable Node.js package:
 
 ```shell
-	bitbake nodejs
+    bitbake nodejs
+```
+
+To select your preferred nodejs version, set the following variable in your local.conf:
+
+```
+PREFERRED_VERSION_nodejs = "8.x.x"
 ```
 
 ### Node.js as a dependency
@@ -82,15 +89,15 @@ To build latest stable Node.js package:
 Add Node.js as a dependency in recipe with `RDEPENDS` (for runtime) or `DEPENDS` (for build):
 
 ```bitbake
-	DEPENDS += " nodejs"
-	RDEPENDS_${PN} += " nodejs"
+    DEPENDS += " nodejs"
+    RDEPENDS_${PN} += " nodejs"
 ```
 
 ### `npm install` buildable recipes
 
 Inherit `npm-install` build task class in your recipe.
 
-Bitbake classes 
+Bitbake classes
 ===============
 
 `meta-nodejs` layer adds few Node.js related helper classes.
@@ -98,17 +105,17 @@ Bitbake classes
 ## `npm-base` class
 
 `npm-base` class defines following functions:
- 
+
   * `oe_runnpm`: call cross-compiling `npm`
   * `oe_runnpm_native`: call native-compiling `npm`
-  
+
 For example:
 
 ```bitbake
   inherit npm-base
 
   do_install() {
-	oe_runnpm install     # Installs dependencies defined in package.json
+    oe_runnpm install     # Installs dependencies defined in package.json
   }
 ```
 
@@ -134,7 +141,7 @@ You can disable one or more of these build tasks in the recipe with `do_<tasknam
 
 ### Variables
 
- * `NPM_INSTALL_FLAGS`: Extra command line arguments for `npm` calls made in `npm_install` task 
+ * `NPM_INSTALL_FLAGS`: Extra command line arguments for `npm` calls made in `npm_install` task
  * `NPM_INSTALL`: Parameters for `npm install` command (such as specific package names)
 
 ## `npm-install-global` class
