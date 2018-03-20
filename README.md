@@ -7,10 +7,11 @@ OpenEmbedded layer for latest [Node.js](https://nodejs.org/ "Node.js") releases.
 
 ## Node.js releases
 
- * ![Current 9](https://img.shields.io/badge/Node.js%20Current-9.1.0-green.svg)
- * ![LTS 8](https://img.shields.io/badge/Node.js%20LTS-8.9.1-blue.svg)
- * ![LTS Maintenance 6](https://img.shields.io/badge/Node.js%20Maintenance-6.12.0-B0C4DE.svg)
- * ![Maintenance 4](https://img.shields.io/badge/Node.js%20Maintenance-4.8.6-B0C4DE.svg)
+ * ![Current 9](https://img.shields.io/badge/Node.js%20Current-9.8.0-green.svg)
+ * ![Active LTS 8](https://img.shields.io/badge/Node.js%20LTS-8.10.0-blue.svg)
+ * ![Active LTS 6](https://img.shields.io/badge/Node.js%20Maintenance-6.13.1-B0C4DE.svg)
+ * ![Maintenance LTS 4](https://img.shields.io/badge/Node.js%20Maintenance-4.8.7-B0C4DE.svg)
+ * ![End of life 7](https://img.shields.io/badge/Node.js%20End%20of%20Life-7.10.1-lightgray.svg)
  * ![End of life 0.12](https://img.shields.io/badge/Node.js%20End%20of%20Life-0.12.18-lightgray.svg)
  * ![End of life 0.10](https://img.shields.io/badge/Node.js%20End%20of%20Life-0.10.48-lightgray.svg)
  * ![End of life 0.8](https://img.shields.io/badge/Node.js%20End%20of%20Life-0.8.28-lightgrey.svg)

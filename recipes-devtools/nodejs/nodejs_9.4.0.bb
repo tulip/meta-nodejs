@@ -1,9 +1,0 @@
-require nodejs_9.inc
-
-INC_PR = "r1"
-
-LIC_FILES_CHKSUM = "file://LICENSE;md5=e2db543702965c38d02b84a60ace95e7"
-
-SRC_URI[src.md5sum] = "de88838417684667cc192dff37f9ef77"
-SRC_URI[src.sha256sum] = "240733d272c87d593bf807618db73ef9682a6b765ed9911c05ea3ab6e221a967"
-

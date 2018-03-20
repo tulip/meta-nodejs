@@ -13,7 +13,8 @@ PR = "${INC_PR}.1"
 PROVIDES = "node"
 RPROVIDES_${PN} = "node"
 
-SRC_URI = "https://nodejs.org/dist/v${PV}/node-v${PV}.tar.gz;name=src"
+SRC_URI = "https://nodejs.org/dist/v${PV}/node-v${PV}.tar.gz;name=src \
+           file://no-registry_8.x.patch"
 
 S = "${WORKDIR}/node-v${PV}"
 
