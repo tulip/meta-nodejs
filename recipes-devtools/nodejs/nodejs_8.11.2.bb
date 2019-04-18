@@ -1,5 +1,4 @@
 require nodejs_8.inc
-require nodejs_lts.inc
 
 INC_PR = "r1"
 

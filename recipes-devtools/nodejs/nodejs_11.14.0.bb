@@ -1,4 +1,4 @@
-require nodejs_10.inc
+require nodejs_11.inc
 
 INC_PR = "r1"
 
