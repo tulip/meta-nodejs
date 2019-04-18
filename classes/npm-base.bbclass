@@ -42,7 +42,7 @@ oe_runnpm() {
     export NPM_VERSION="$(${NPM} --v)"
     export NPM_CACHE_CMD="clean --force"
 
-    if [ "${NPM_CACHE_DIR}" == "" ]; then
+    if [ "${NPM_CACHE_DIR}" = "" ]; then
         export NPM_CONFIG_CACHE="${DL_DIR}/npm_v${NPM_VERSION}_${TARGET_ARCH}_cache/${PF}"
     else
         export NPM_CONFIG_CACHE=${NPM_CACHE_DIR}
@@ -108,7 +108,7 @@ oe_runnpm_native() {
     export NPM_VERSION="$(${NPM} --v)"
     export NPM_CACHE_CMD="clean --force"
 
-    if [ "${NPM_CACHE_DIR_NATIVE}" == "" ]; then
+    if [ "${NPM_CACHE_DIR_NATIVE}" = "" ]; then
         export NPM_CONFIG_CACHE="${DL_DIR}/npm_v${NPM_VERSION}_${TARGET_ARCH}_native/${PF}"
     else
         export NPM_CONFIG_CACHE=${NPM_CACHE_DIR_NATIVE}
