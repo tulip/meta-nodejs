@@ -13,8 +13,7 @@ OpenEmbedded layer for latest [Node.js](https://nodejs.org/ "Node.js") releases.
  * ![Maintenance LTS 8](https://img.shields.io/badge/Node.js%20Maintenance-8.11.2-B0C4DE.svg)
  * ![Maintenance LTS 6](https://img.shields.io/badge/Node.js%20Maintenance-6.13.1-B0C4DE.svg)
  * ![End of life 7](https://img.shields.io/badge/Node.js%20End%20of%20Life-7.10.1-lightgray.svg)
-
-![LTS Schedule]()
+## LTS Schedule
 <p><img src="https://raw.githubusercontent.com/nodejs/Release/master/schedule.svg?sanitize=true" alt="LTS Schedule"/></p>
 
 ## Dependencies
