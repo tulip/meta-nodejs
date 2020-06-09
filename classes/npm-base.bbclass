@@ -137,7 +137,7 @@ oe_runnpm_native() {
         NPM_CACHE_CMD="verify"
     fi
 
-    ${NPM} cache $NPM_CACHE_CMD || die "oe_runnpm_native failed (cache $NPM_CACHE_CMD)"
+    ${NPM_NATIVE} cache $NPM_CACHE_CMD || die "oe_runnpm_native failed (cache $NPM_CACHE_CMD)"
 
     LD="${NPM_LD_NATIVE}" ${NPM_NATIVE} --registry=${NPM_REGISTRY} ${ARCH_FLAGS} ${NPM_FLAGS_NATIVE} "$@" || die "oe_runnpm_native failed (install)"
 }
