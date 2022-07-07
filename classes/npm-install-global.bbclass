@@ -14,9 +14,9 @@ do_install() {
     oe_runnpm ${NPM_INSTALL_FLAGS} install -g --prefix=${D}${prefix} --verbose
 }
 
-FILES_${PN} += "${prefix}"
+FILES:${PN} += "${prefix}"
 
 #
 # npm causes unavoidable host-user-contaminated QA warnings for debug packages
 #
-INSANE_SKIP_${PN}-dbg += " host-user-contaminated"
+INSANE_SKIP:${PN}-dbg += " host-user-contaminated"

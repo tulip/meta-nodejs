@@ -29,7 +29,7 @@ do_npm_audit() {
 #
 # npm causes unavoidable host-user-contaminated QA warnings for debug packages
 #
-INSANE_SKIP_${PN}-dbg += " host-user-contaminated"
+INSANE_SKIP:${PN}-dbg += " host-user-contaminated"
 
 addtask npm_install after do_compile before do_npm_dedupe
 addtask npm_shrinkwrap after do_npm_install before do_npm_dedupe

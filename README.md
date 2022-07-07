@@ -85,7 +85,7 @@ Add Node.js as a dependency in recipe with `RDEPENDS` (for runtime) or `DEPENDS`
 
 ```bitbake
     DEPENDS += " nodejs"
-    RDEPENDS_${PN} += " nodejs"
+    RDEPENDS:${PN} += " nodejs"
 ```
 
 ### `npm install` buildable recipes
