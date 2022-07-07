@@ -1,4 +1,4 @@
-DEPENDS += " node-native"
+DEPENDS += " nodejs-native"
 
 inherit nodejs-arch
 
